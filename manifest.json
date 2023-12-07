@@ -1,0 +1,30 @@
+{
+  "name": "Зарядка за компьютером",
+  "description": "Расширение, которое напоминает пользователю о зарядке за компьютером, каждые 2 часа",
+  "version": "1.0",
+  "manifest_version": 3,
+
+  "permissions": ["activeTab", "scripting"],
+
+  "action": {
+    "default_popup": "fitness.html",
+    "default_icon": {
+      "32": "/images/icon32.png",
+      "48": "/images/icon48.png",
+      "128": "/images/icon128.png"
+    }
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["fitness.js"]
+    }
+  ],
+
+  "icons": {
+    "32": "/images/icon32.png",
+    "48": "/images/icon48.png",
+    "128": "/images/icon128.png"
+  }
+}
